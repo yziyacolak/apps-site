@@ -1,0 +1,57 @@
+{
+ "version": 1,
+ "updated": "2026-10-16",
+ "exams": [
+  {
+   "id": "yks",
+   "title": "YKS",
+   "subtitle": "Üniversite sınavı",
+   "official": false,
+   "prepStart": "2026-06-22",
+   "sessions": [
+    {
+     "name": "TYT",
+     "date": "2027-06-19T10:15:00+03:00"
+    },
+    {
+     "name": "AYT",
+     "date": "2027-06-20T10:15:00+03:00"
+    },
+    {
+     "name": "YDT",
+     "date": "2027-06-20T15:45:00+03:00"
+    }
+   ]
+  },
+  {
+   "id": "lgs",
+   "title": "LGS",
+   "subtitle": "Liselere geçiş sınavı",
+   "official": false,
+   "prepStart": "2026-09-08",
+   "sessions": [
+    {
+     "name": "Sözel",
+     "date": "2027-06-13T09:30:00+03:00"
+    },
+    {
+     "name": "Sayısal",
+     "date": "2027-06-13T11:30:00+03:00"
+    }
+   ]
+  },
+  {
+   "id": "kpss",
+   "title": "KPSS Lisans",
+   "subtitle": "Genel Yetenek – Genel Kültür",
+   "official": false,
+   "prepStart": "2026-09-07",
+   "sessions": [
+    {
+     "name": "GY-GK",
+     "date": "2027-09-05T10:15:00+03:00"
+    }
+   ]
+  }
+ ]
+}
