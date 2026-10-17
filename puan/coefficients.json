@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "updated": "2026-10-17",
+  "note": "Tahmini katsayılar. ÖSYM/MEB her yıl sınav sonrası kesin değerleri açıklar.",
+  "yks": {
+    "wrongPenalty": 4,
+    "minNet": 0.5,
+    "obpFactor": 0.12,
+    "obpFactorPlaced": 0.06,
+    "subjects": [
+      { "id": "tyt_tr",  "name": "Türkçe",          "exam": "TYT", "questions": 40 },
+      { "id": "tyt_sos", "name": "Sosyal Bilimler", "exam": "TYT", "questions": 20 },
+      { "id": "tyt_mat", "name": "Temel Matematik", "exam": "TYT", "questions": 40 },
+      { "id": "tyt_fen", "name": "Fen Bilimleri",   "exam": "TYT", "questions": 20 },
+      { "id": "ayt_mat", "name": "Matematik",       "exam": "AYT", "questions": 40 },
+      { "id": "ayt_fiz", "name": "Fizik",           "exam": "AYT", "questions": 14 },
+      { "id": "ayt_kim", "name": "Kimya",           "exam": "AYT", "questions": 13 },
+      { "id": "ayt_bio", "name": "Biyoloji",        "exam": "AYT", "questions": 13 },
+      { "id": "ayt_edb", "name": "Edebiyat",        "exam": "AYT", "questions": 24 },
+      { "id": "ayt_ta1", "name": "Tarih-1",         "exam": "AYT", "questions": 10 },
+      { "id": "ayt_co1", "name": "Coğrafya-1",      "exam": "AYT", "questions": 6 },
+      { "id": "ayt_ta2", "name": "Tarih-2",         "exam": "AYT", "questions": 11 },
+      { "id": "ayt_co2", "name": "Coğrafya-2",      "exam": "AYT", "questions": 11 },
+      { "id": "ayt_fel", "name": "Felsefe Grubu",   "exam": "AYT", "questions": 12 },
+      { "id": "ayt_din", "name": "Din Kültürü",     "exam": "AYT", "questions": 6 },
+      { "id": "ydt",     "name": "Yabancı Dil",     "exam": "YDT", "questions": 80 }
+    ],
+    "types": [
+      { "id": "TYT", "name": "TYT", "base": 100,
+        "coef": { "tyt_tr": 3.3, "tyt_sos": 3.4, "tyt_mat": 3.3, "tyt_fen": 3.4 },
+        "required": ["tyt_tr", "tyt_mat"] },
+      { "id": "SAY", "name": "Sayısal", "base": 100,
+        "coef": { "tyt_tr": 1.32, "tyt_sos": 1.36, "tyt_mat": 1.32, "tyt_fen": 1.36,
+                  "ayt_mat": 3.0, "ayt_fiz": 3.0, "ayt_kim": 3.0, "ayt_bio": 3.0 },
+        "required": ["ayt_mat", "ayt_fiz", "ayt_kim", "ayt_bio"] },
+      { "id": "EA", "name": "Eşit Ağırlık", "base": 100,
+        "coef": { "tyt_tr": 1.32, "tyt_sos": 1.36, "tyt_mat": 1.32, "tyt_fen": 1.36,
+                  "ayt_mat": 3.0, "ayt_edb": 3.0, "ayt_ta1": 3.0, "ayt_co1": 3.0 },
+        "required": ["ayt_mat", "ayt_edb", "ayt_ta1", "ayt_co1"] },
+      { "id": "SÖZ", "name": "Sözel", "base": 100,
+        "coef": { "tyt_tr": 1.32, "tyt_sos": 1.36, "tyt_mat": 1.32, "tyt_fen": 1.36,
+                  "ayt_edb": 3.0, "ayt_ta1": 3.0, "ayt_co1": 3.0, "ayt_ta2": 3.0,
+                  "ayt_co2": 3.0, "ayt_fel": 3.0, "ayt_din": 3.0 },
+        "required": ["ayt_edb", "ayt_ta1", "ayt_co1", "ayt_ta2", "ayt_co2", "ayt_fel", "ayt_din"] },
+      { "id": "DİL", "name": "Dil", "base": 100,
+        "coef": { "tyt_tr": 1.32, "tyt_sos": 1.36, "tyt_mat": 1.32, "tyt_fen": 1.36, "ydt": 3.0 },
+        "required": ["ydt"] }
+    ]
+  },
+  "lgs": {
+    "wrongPenalty": 3,
+    "base": 194.752,
+    "subjects": [
+      { "id": "tr",  "name": "Türkçe",                 "questions": 20, "coef": 4.522 },
+      { "id": "mat", "name": "Matematik",              "questions": 20, "coef": 4.522 },
+      { "id": "fen", "name": "Fen Bilimleri",          "questions": 20, "coef": 4.522 },
+      { "id": "ink", "name": "T.C. İnkılap Tarihi",    "questions": 10, "coef": 1.1305 },
+      { "id": "din", "name": "Din Kültürü",            "questions": 10, "coef": 1.1305 },
+      { "id": "ing", "name": "Yabancı Dil",            "questions": 10, "coef": 1.1305 }
+    ]
+  },
+  "kpss": {
+    "wrongPenalty": 4,
+    "base": 55.839,
+    "max": 100,
+    "subjects": [
+      { "id": "gy", "name": "Genel Yetenek", "questions": 60, "coef": 0.348 },
+      { "id": "gk", "name": "Genel Kültür",  "questions": 60, "coef": 0.431 }
+    ]
+  }
+}
